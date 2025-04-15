@@ -14,7 +14,7 @@ public class Barang {
     }
 
     void tampilDataBarang() {
-        System.out.printf("%-10s %-10s %-10s %-10d %-10d\n", this.kodeBarang, this.nama, this.kategori,
+        System.out.printf("%-10s %-15s %-10s %-10d %-10d\n", this.kodeBarang, this.nama, this.kategori,
         this.stok, this.harga);
     }
 }

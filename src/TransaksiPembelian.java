@@ -17,7 +17,7 @@ public class TransaksiPembelian {
    }
 
    void tampilDataTransaksi(){
-    System.out.printf("%-10s %-10s %-10s %-10s %-10d %-10s\n", this.kodeTransaksi, this.namaPembeli, this.tanggalPembelian,
-    this.brg, this.qty, this.harga);
+    System.out.printf("%-10s %-15s %-20s %-15s %-10d %-10s\n", this.kodeTransaksi, this.namaPembeli, this.tanggalPembelian,
+    this.brg.nama, this.qty, this.harga);
    }
 }

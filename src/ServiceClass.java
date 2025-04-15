@@ -15,7 +15,7 @@ public class ServiceClass {
 
     void tambahDataBarang(Barang barangs) {
         if (idx2 < Brg.length) {
-            Brg[idx] = barangs;
+            Brg[idx2] = barangs;
             idx2++;
         } else {
             System.out.println("Data sudah penuh");
@@ -40,12 +40,16 @@ public class ServiceClass {
     // }
 
     void tampilSemuaDataBarang() {
+        System.out.printf("%-10s %-15s %-10s %-15s %-10s\n", "Kode", "Nama", "Kategori",
+        "Stok", "Harga");
         for (int i = 0; i < Brg.length; i++) {
             Brg[i].tampilDataBarang();
         }
     }
 
     void tampilSemuaDataTransaksi() {
+        System.out.printf("%-10s %-15s %-20s %-10s %-10s %-10s\n", "Kode", "Nama pembeli", "Tanggal pembelian",
+        "Nama barang", "Kuantitas", "Harga");
         for (int i = 0; i < Trs.length; i++) {
             Trs[i].tampilDataTransaksi();
         }
@@ -60,6 +64,6 @@ public class ServiceClass {
     }
 
     void tampilDataSearch(int posisi) {
-        Brg[posisi].tampilDataBarang();
+        Trs[posisi].tampilDataTransaksi();
     }
 }
