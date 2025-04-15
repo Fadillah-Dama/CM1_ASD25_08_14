@@ -28,14 +28,15 @@ public class Main {
         list.tambahDataTransaksi(tr3);
         list.tambahDataTransaksi(tr4);
         list.tambahDataTransaksi(tr5);
+
         while (true) {
-            System.out.println("BANK MENU : ");
+            System.out.println("Pilih MENU : ");
             System.out.println("1. Data Barang");
             System.out.println("2. Data Transaksi");
             System.out.println("3. Pencarian Data");
             System.out.println("4. Pengurutan Data");
-            System.out.println("6. exit");
-            System.out.println("Pilih Menu (1-6) :");
+            System.out.println("5. exit");
+            System.out.println("Pilih Menu (1-5) :");
             int pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -54,7 +55,13 @@ public class Main {
                 list.tampilDataSearch(posisi);
                 break;
             case 4:
-                
+                System.out.println("Sorting Tranksaksi ASC sesuai kode barang");
+                list.sorting();
+                System.out.println("Pilih menu 2 untuk melihat");
+                break;
+            case 5:
+                System.out.println("Program dihentikan");
+                return;
             default:
                 break;
         }

@@ -31,13 +31,17 @@ public class ServiceClass {
         return -1;
     }
 
-    // void sorting() {
-    //     for (int i = 0; i < Brg.length - 1; i++) {
-    //         for (int j = 0; j < Brg.length - i - 1; j++) {
-    //             if (Brg.)
-    //         }
-    //     }
-    // }
+    void sorting() {
+        for (int i = 0; i < Brg.length-1; i++) {
+            for (int j = 0; j < Brg.length- i - 1; j++) {
+                if (Trs[j].brg.kodeBarang.compareToIgnoreCase(Trs[j+1].brg.kodeBarang)>0) {
+                    TransaksiPembelian temp = Trs[j];
+                    Trs[j] = Trs[j+1];
+                    Trs[j+1] = temp;
+                }
+            }
+        }
+    }
 
     void tampilSemuaDataBarang() {
         System.out.printf("%-10s %-15s %-10s %-15s %-10s\n", "Kode", "Nama", "Kategori",
